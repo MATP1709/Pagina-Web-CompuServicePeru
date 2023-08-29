@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/HyF.css">
+    <link rel="stylesheet" href="/css/registro.css">
+    <link rel="stylesheet" href="/css/index.css">
+    <title>COMPUSERVICEPERÚ</title>
+</head>
+<body>
+    <!--                    INICIO DE HEADER              -->
+    <header class="encabezado-pagina">    
+        <section class="back">
+            <div class="menu container">                
+               <a href="index.html" class="logo">COMPU SERVICE PERÚ</a>       
+                <!--Empezamos con la edición-->
+                <input type="checkbox" id="menu"/>
+                <label for="menu">
+                    <img src="/img/menu.png" class="menu-icono" alt="">
+                </label>
+                <!--Empezamos con la edición-->
+                <nav class="navbar">
+                    <ul>
+                        <li><a href="index.html"><span class="fa fa-home text-info"></span> Inicio</a></li>  
+                        <li><a href="nosotros.html"><span class="fa fa-users text-warning"></span> Nosotros</a></li>
+                        <li><a href="servicios.html"><span class="fa fa-gear text-success"></span> Servicios</a></li>
+                        <li><a href="contactenos.html"><span class="fa fa-envelope text-warning"></span> Contáctenos</a></li>
+                        <li><a href="ubicacion.html"><span class="fa fa-map-marker text-info bg-dark"></span> Ubícanos</a></li>
+                        <li><a href="login.html"><span class="fa fa-user-circle"></span> Ingresar</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </section>
+    </header>
+    <!--                    FIN HEADER              -->
+
+    <main>
+        <form id="formulario" class="form-register">
+            <h4>Formulario de Registro</h4>
+
+            <!--Nombre-->
+            <div class="formulario__grupo" id="grupo__nombre">
+                <label for="nombres" class="txtEncabezado">Nombre:</label>
+                <div class="formulario__grupo-input">
+                    <input class="cajastxt" type="text" name="nombres" id="nombres" placeholder="Ingrese su Nombre Completo">
+                    <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                </div>
+				<p class="formulario__input-error">Ingresar 4 a 40 dígitos y solo acepta letras.</p> 
+            </div>
+
+            <!--Email-->
+            <div class="formulario__grupo" id="grupo__correo">
+                <label for="email" class="txtEncabezado">Email:</label>
+                <div class="formulario__grupo-input">
+                    <input class="cajastxt" type="email" name="email" id="email" placeholder="Ingrese su Correo Electrónico">
+					<i class="formulario__validacion-estado fas fa-times-circle"></i>
+                </div>
+				<p class="formulario__input-error">Correo incorrecto. Ejemplo:  correo@correo.com</p>
+            </div>
+            
+            <!--FECHA DE NACIMIENTO-->
+            <label for="fecha" class="txtEncabezado">Fecha de nacimiento:</label>
+            <input type="date" class="fecha" name="fecha" id="fecha">
+            <!--FIN FECHA DE NACIMIENTO-->
+
+            <!--USUARIO-->
+            <div class="formulario__grupo" id="grupo__usuario">
+                <label for="usuario" class="txtEncabezado">Usuario:</label>
+                <div>
+                    <input class="cajastxt" type="text" name="usuario" id="usuario" placeholder="Ingrese su Usuario">
+					<i class="formulario__validacion-estado fas fa-times-circle"></i>
+                </div>
+				<p class="formulario__input-error">Ingresar 4 a 16 dígitos, solo acepta números y letras</p>
+            </div>
+            <!--FIN USUARIO-->
+
+            <!--INICIO CONTRASEÑA-->
+			<div class="formulario__grupo" id="grupo__password">
+                <label for="password" class="txtEncabezado">Contraseña:</label>
+                <div class="formulario__grupo-input">
+                    <input class="cajastxt" type="password" name="password" id="password" placeholder="Ingrese su Contraseña">
+                    <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                </div>
+				<p class="formulario__input-error">La contraseña tiene que ser de 4 a 12 dígitos.</p>
+            </div>
+            <!-- FIN  CONTRASEÑA-->
+
+            <!-- INICIO  CONTRASEÑA 2-->
+			<div class="formulario__grupo" id="grupo__password">
+                <label for="password2" class="txtEncabezado">Contraseña:</label>
+                <div class="formulario__grupo-input">
+                    <input class="cajastxt" type="password" name="password2" id="password2" placeholder="Ingrese su Contraseña">
+                    <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                </div>
+				<p class="formulario__input-error">La contraseña no es igual.</p>
+            </div>
+            <!-- FIN  CONTRASEÑA 2-->
+            
+            <!--Para indicar que el formulario no se ingreso correctamente-->
+			<div class="formulario__mensaje" id="formulario__mensaje">
+				<p><b>Error:</b> Por favor rellena el formulario correctamente. </p>
+			</div>
+            
+            <!--<p> Estoy de acuerdo con <a href="#">Terminos y Condiciones</a></p>-->
+            <!--btn para terminos y condiciones-->
+            <div>
+                <div class="boton-switch">
+                    <p>
+                        <input type="checkbox" id="btn-switch">
+                        <label for="btn-switch" class="lbl-switch"></label>
+                        Estoy de acuerdo con<a href="#">Terminos y Condiciones</a>
+                    </p>
+                </div>
+            </div>
+            <!--boton de registrar-->
+            <input type="submit" id="button" class="boton" value="Registrar">
+            <p><a href="login.html">¿Ya tengo Cuenta?</a></p>
+            <!-- mensaje de que se envio correctamente-->
+			<p class="formulario__mensaje-exito" id="formulario__mensaje-exito">Formulario enviado exitosamente!</p>
+        </form>
+
+        <div class="whatsapp-boton">
+            <a href="https://wa.me/941349964?text=Este%20es%20el%20exámen%20final%20CERTUS" target="_blank">
+                <img class="whatsappboton" src="/img/wp.png" alt="">
+            </a>
+        </div>
+    </main>
+
+    <!--INICIO DE FOOTER-->
+    <footer class="pie-pagina"> <!--Encapsulamos todo lo que se pondra en el footer-->
+        <div class="grupo-1">
+            <div class="box">
+                <h2>Sobre Nosotros</h2>
+                <a href="nosotros.html"><p>- Acerca de nosotros</p></a>
+            </div>
+            <div class="box">
+                <h2>Compras con confianza</h2>
+                <a href=""><p>- Política de garantía</p></a>
+                <a href="contactenos.html"><p>- Contáctenos</p></a>
+                <a href=""><p>- Política de privacidad</p></a>
+            </div>
+            <div class="box">
+                <h2>Nuestros productos</h2>
+                <a href="servicios.html"><p>- Catálogo</p></a>
+                
+            </div>
+            <div class="box">
+                <h2>Siguenos</h2>
+                <div class="red-social">
+                    <a href="#"><span class="fab fa-facebook-f"></span></a>                
+                    <a href="#"><span class="fab fa-instagram"></span></a>
+                    <a href="https://wa.me/941349964?text=Este%20es%20el%20exámen%20final%20CERTUS" target="_blank"><span class="fab fa-whatsapp"></span></a>
+                    <a href="video/compluplaza.mp4" target="_blank" ><span class="fab fa-youtube"></span></a>
+                </div>
+            </div>  
+        </div>
+        <div class="grupo-2">
+            <small>&copy; 2023 <b>COMPUSERVICEPERÚ</b> - Todos los Derechos Reservados</small>
+        </div>
+    </footer>
+    <!--FIN DE FOOTER-->
+    <script src="../js/registro.js"></script>
+</body>
+</html>
