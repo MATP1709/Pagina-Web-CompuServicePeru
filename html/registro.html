@@ -43,7 +43,6 @@
     <main>
         <form id="formulario" class="form-register">
             <h4>Formulario de Registro</h4>
-
             <!--Nombre-->
             <div class="formulario__grupo" id="grupo__nombre">
                 <label for="nombres" class="txtEncabezado">Nombre:</label>
@@ -65,8 +64,14 @@
             </div>
             
             <!--FECHA DE NACIMIENTO-->
-            <label for="fecha" class="txtEncabezado">Fecha de nacimiento:</label>
-            <input type="date" class="fecha" name="fecha" id="fecha">
+            <div class="formulario__grupo" id="grupo__fecha">    
+                <label for="fecha" class="txtEncabezado">Fecha de nacimiento:</label>
+                <div class="formulario__grupo-input">
+                    <input class="cajastxt" type="date" name="fecha" id="fecha">
+                    <i class="formulario__validacion-estado fas fa-times-circle"></i>                   
+                </div>
+				<p class="formulario__input-error">La fecha es incorrecta.</p>
+            </div>
             <!--FIN FECHA DE NACIMIENTO-->
 
             <!--USUARIO-->
@@ -92,10 +97,10 @@
             <!-- FIN  CONTRASEÑA-->
 
             <!-- INICIO  CONTRASEÑA 2-->
-			<div class="formulario__grupo" id="grupo__password">
-                <label for="password2" class="txtEncabezado">Contraseña:</label>
+			<div class="formulario__grupo" id="grupo__password2">
+                <label for="password2" class="txtEncabezado">Repetir Contraseña:</label>
                 <div class="formulario__grupo-input">
-                    <input class="cajastxt" type="password" name="password2" id="password2" placeholder="Ingrese su Contraseña">
+                    <input class="cajastxt" type="password" name="password2" id="password2" placeholder="Repetir Contraseña">
                     <i class="formulario__validacion-estado fas fa-times-circle"></i>
                 </div>
 				<p class="formulario__input-error">La contraseña no es igual.</p>
@@ -112,14 +117,14 @@
             <div>
                 <div class="boton-switch">
                     <p>
-                        <input type="checkbox" id="btn-switch">
-                        <label for="btn-switch" class="lbl-switch"></label>
+                        <input type="checkbox" id="terminos">
+                        <label for="terminos" class="lbl-switch"></label>
                         Estoy de acuerdo con<a href="#">Terminos y Condiciones</a>
                     </p>
                 </div>
             </div>
             <!--boton de registrar-->
-            <input type="submit" id="button" class="boton" value="Registrar">
+            <button type="submit" id="button" class="boton">Registrar</button>
             <p><a href="login.html">¿Ya tengo Cuenta?</a></p>
             <!-- mensaje de que se envio correctamente-->
 			<p class="formulario__mensaje-exito" id="formulario__mensaje-exito">Formulario enviado exitosamente!</p>

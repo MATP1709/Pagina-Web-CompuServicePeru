@@ -124,14 +124,14 @@ body{
     transition: 0.4s;
 }
 
-#btn-switch{ /*para borrar el cuadro de checkbox*/
+#terminos{ /*para borrar el cuadro de checkbox*/
     display: none;
 }
 
-#btn-switch:checked~ .lbl-switch{ /*cada vez que este activo, cambiara de color */
+#terminos:checked~ .lbl-switch{ /*cada vez que este activo, cambiara de color */
     background-color: #1f53c5;
 }
-#btn-switch:checked~ .lbl-switch::after{ /*para que el boton se desplace a la izquierda y encianda el color*/
+#terminos:checked~ .lbl-switch::after{ /*para que el boton se desplace a la izquierda y encianda el color*/
     left: 25px;
 }
 /*boton fin*/
